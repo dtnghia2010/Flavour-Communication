@@ -8,9 +8,9 @@
 // 1 1 10
 
 // DIRECTION OF PUMP
-const int FORWARD = 'F';
-const int REVERSE = 'R';
-const int HALT = 'H';
+const int FORWARD = 1;
+const int REVERSE = 2;
+const int HALT = 0;
 
 // PIN OF PUMP
 const int PUMP_IN1[] = {22, 24, 26, 28, 30, 32}; // Green 
@@ -97,7 +97,7 @@ void reduceDurations(unsigned long deltaTime) {
     }
 }
 
-void turn(int pump, char dir, int speed) {
+void turn(int pump, int dir, int speed) {
     Serial.println("Setting speed!");
     turnDirection(pump, dir);
 
@@ -115,7 +115,7 @@ void turn(int pump, char dir, int speed) {
 }
 
 //Case for pump direction and stop
-void turnDirection(int pump, char dir) {
+void turnDirection(int pump, int dir) {
     int out1;
     int out2;
     switch (dir) {
@@ -161,21 +161,22 @@ void handleInput() {
        if (count == 4){
           //Asign which part of the input command to be read
           String pump = array[0];
-          String dir = array[1];
+          String dirString = array[1];
           String durationString = array[2];
           String speedString = array[3];
 
           // Convert String to char array
           int pumpIndex = pump.charAt(0) -'1';
-          char dirChar = dir.charAt(0);
+          // char dirChar = dir.charAt(0);
 
           // Convert duration and speed from String to int
+          int dir = extractDuration(dirString.c_str()); 
           int duration = extractDuration(durationString.c_str());
           int speed = extractSpeed(speedString.c_str());
 
           // Start or update duration only if it's greater than 0
           if (speed >= 0 && speed <= 255) {
-              turn(pumpIndex, dirChar, speed);                
+              turn(pumpIndex, dir, speed);                
               if (duration > 0) {
                 durations_Pump[pumpIndex] = duration;
               } else {
