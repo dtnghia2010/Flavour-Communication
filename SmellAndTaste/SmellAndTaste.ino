@@ -5,7 +5,7 @@
 // 1 F 10000 200
 
 //<index> <state> <time>
-// 1 1 1000
+// 1 1 10
 
 // DIRECTION OF PUMP
 const int FORWARD = 1;
@@ -14,7 +14,7 @@ const int HALT = 0;
 
 // PIN OF PUMP
 const int PUMP_IN1[] = {22, 24, 26, 28, 30, 32}; // Green 
-const int PUMP_IN2[] = {23, 25, 27, 2 9, 31, 33}; // Yellow
+const int PUMP_IN2[] = {23, 25, 27, 29, 31, 33}; // Yellow
 const int PUMP_PWM[] = {2, 3, 4, 5, 6, 7}; // White
 
 // PIN OF RELAYS
