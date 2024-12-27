@@ -14,7 +14,7 @@ FlavorSync integrates **software controllers** and **hardware units** to deliver
 
 ### System Architecture
 
-![System Architecture](images/System Architecture.png)
+![System Architecture](images/System-Architecture.png)
 
 The architecture connects a user-friendly software interface to sensory hardware. Key components include:
 
@@ -29,7 +29,7 @@ The architecture connects a user-friendly software interface to sensory hardware
 
 ### Gustatory Unit
 
-![Gustatory Unit](images/Gustatory Unit.png)
+![Gustatory Unit](images/Gustatory-Unit.png)
 
 The gustatory unit simulates taste using precision pumps and flavor containers.
 
@@ -40,7 +40,7 @@ The gustatory unit simulates taste using precision pumps and flavor containers.
 
 ### Olfactory Unit
 
-![Olfactory Unit](images/Olfactory Unit.png)
+![Olfactory Unit](images/Olfactory-Unit.png)
 
 The olfactory unit delivers smells using air pumps and aroma containers.
 
@@ -53,7 +53,7 @@ The olfactory unit delivers smells using air pumps and aroma containers.
 
 ## 🛠 Enclosure Design
 
-![Enclosure Design](images/Enclosure Design.png)
+![Enclosure Design](images/Enclosure-Design.png)
 
 The hardware components are housed in a compact, modular enclosure designed for durability and ease of maintenance. Key features include:
 
